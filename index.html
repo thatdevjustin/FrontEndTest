@@ -1,0 +1,21 @@
+<!Doctype html>
+<html ng-app="Homework">
+    <head>
+        <script src="scripts/angular.min.js" ></script>
+        <script src="scripts/jquery-3.2.1.min.js"></script>
+        <script src="scripts/circle-progress.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/custom.js"></script>
+    </head>
+    <body>
+        <div ng-controller="HomeworkController">
+            <ul>
+                <li ng-repeat="task in listTasks">
+                    <input type="checkbox" ng-model="task.done" ng-click="finish()">
+                    <span>{{task.todo}}</span>                
+                </li>
+            </ul>
+            <prog-bar size="100"></prog-bar>
+        </div>
+    </body>
+</html>
